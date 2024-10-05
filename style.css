@@ -1,0 +1,137 @@
+/* Background and fonts */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvam9iNDA1LW1hZXdoLTAyYS5qcGc.jpg'); /* Path to your uploaded image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+.quiz-container {
+  background-color: rgba(20, 20, 40, 0.8); /* Dark purple-blue tint to match the image */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Subtle white glow */
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: glow 2s infinite alternate;
+  margin: 10px;
+  box-sizing: border-box; /* Ensure padding is included within the width */
+}
+
+/* Neon glow animation */
+@keyframes glow {
+  from {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  to {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Headings with subtle neon effect */
+h1, h2 {
+  color: #d9b3ff; /* Light lavender matching the neon purples in the image */
+  text-shadow: 0 0 10px rgba(217, 179, 255, 0.5);
+  font-size: 2em;
+}
+
+/* Input field */
+input {
+  padding: 10px;
+  width: calc(100% - 20px); /* Reduce width slightly to allow padding */
+  margin-bottom: 15px;
+  border: 1px solid #b3c6ff; /* Soft pastel blue */
+  border-radius: 5px;
+  background-color: rgba(0, 0, 40, 0.8); /* Dark blue background */
+  color: #b3c6ff; /* Light pastel blue */
+  font-size: 16px;
+  text-shadow: 0 0 5px rgba(179, 198, 255, 0.7);
+  box-shadow: 0 0 10px rgba(179, 198, 255, 0.2);
+  box-sizing: border-box; /* Ensure padding is included within the width */
+}
+
+/* Buttons with a simple glow */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e699ff; /* Soft pink */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(230, 153, 255, 0.4); /* Soft glow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #d966ff; /* Darker pink */
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(230, 153, 255, 0.8);
+}
+
+/* Neon button for choices */
+#choices button {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #99ccff; /* Light sky blue */
+  color: black;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #99ccff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(153, 204, 255, 0.4);
+}
+
+#choices button:hover {
+  background-color: #80bfff; /* Darker blue */
+  box-shadow: 0 0 30px rgba(153, 204, 255, 0.8);
+}
+
+/* Styling for the score display */
+#scoreDisplay {
+  color: #e6ccff; /* Soft light purple */
+  font-size: 18px;
+  text-shadow: 0 0 10px rgba(230, 204, 255, 0.5);
+  margin-top: 20px;
+}
+
+/* Next button */
+#nextBtn {
+  display: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #99ccff; /* Light pastel blue */
+  color: black;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(153, 204, 255, 0.4);
+}
+
+#nextBtn:hover {
+  background-color: #80bfff; /* Darker blue */
+  box-shadow: 0 0 30px rgba(153, 204, 255, 0.8);
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 400px) {
+  h1, h2 {
+      font-size: 1.5em; /* Smaller headings */
+  }
+
+  .quiz-container {
+      padding: 15px;
+  }
+
+  button {
+      font-size: 14px; /* Smaller button text */
+  }
+}
